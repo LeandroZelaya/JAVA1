@@ -5,7 +5,7 @@ public class Punto2 {
 		Scanner scanner = new Scanner(System.in);	
 		int numero;
 		int divisores=0;
-		System.out.println("ingresar un numero del 1 al 100");
+		System.out.println("ingresar un numero del 50 al 100");
 		numero = scanner.nextInt();
 		if(numero >=50 && numero <=100){
 			for(int i = 1; i<=numero ; i++) { //for para sacar el numero de divisores
