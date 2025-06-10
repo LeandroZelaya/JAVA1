@@ -2,33 +2,33 @@ import java.util.Scanner;
 public class Punto2 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);	
-		int numero;
-		int divisores=0;
-		System.out.println("ingresar un numero del 50 al 100");
-		numero = scanner.nextInt();
-		if(numero >=50 && numero <=100){
-			for(int i = 1; i<=numero ; i++) { //for para sacar el numero de divisores
-				if(numero % i == 0){
-					divisores++;
+		int i = 0;
+		int j=0;
+		int divi=0;
+		
+		for(i=50; i<=100;i++) {
+			divi=0;
+			for(j=1; j <=100; j++) {
+				if(i%j==0) {
+					divi++;
 				}
+
 			}
-			if(divisores == 2) {
-			System.out.println("Es primo");
+			if(divi==2) {
+				System.out.println("\n" +i +": Es primo");
 			}
 			else {
-		System.out.println("No es primo");
-		for(int i = 1; i<=numero ; i++) {
-			if(numero % i == 0){
-				System.out.println(i);
+				System.out.println("\n"+i+" divisores:    ");
+				for(j=1;j<100;j++){
+					if(i%j==0) {
+						System.out.println(j+" ");
+					}
+				}
 			}
-		}
-			}
-		}else {
-		System.out.println("El numero esta fuera del rango");
+			
+		}	
+		
+		}		
+		}	
 	
-		}
-	 scanner.close();
-	}
 
-}
